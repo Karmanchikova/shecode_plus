@@ -1,0 +1,56 @@
+div.main {
+  margin: 20px auto;
+  height: 600px;
+  width: 600px;
+  background-color: #f8f8f8;
+  color: #142e5a;
+  border: #b6c8db solid;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+i.first {
+  color: #f4936d;
+  font-size: 72px;
+  margin-left: 25px;
+}
+ul {
+  list-style: none;
+}
+
+h2 {
+  display: inline;
+}
+.change {
+  display: inline-block;
+}
+h1 {
+  margin-left: 25px;
+}
+i {
+  display: block;
+}
+.lol {
+  border-right: #f4936d solid;
+  margin: auto;
+}
+.days {
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.additional {
+  font-weight: 500;
+  padding-left: 27px;
+}
+span {
+  font-size: 15px;
+  opacity: 0.7;
+  text-align: right;
+  font-family: monospace;
+}
+.me {
+  text-align: center;
+  padding-top: 20px;
+}
