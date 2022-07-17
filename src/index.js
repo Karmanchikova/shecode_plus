@@ -21,13 +21,25 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  console.log(response.data);
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#humidity").innerHTML =
+    "Humidity: " + response.data.main.humidity + " %;";
+  document.querySelector("#wind").innerHTML =
+    "Wind: " + Math.round(response.data.wind.speed) + " km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#realFeel").innerHTML =
+    "Feels like " + Math.round(response.data.main.feels_like) + "  °C";
+
+  document.querySelector("#mini").innerHTML =
+    "Min. temp " + Math.round(response.data.main.temp_min) + "  °C";
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -58,10 +70,6 @@ fahrenheitClick.addEventListener("click", convertToFahrenheit);
 
 let celsiusClick = document.querySelector("#cel");
 celsiusClick.addEventListener("click", convertToCelsius);
-
-let dateElement = document.querySelector("#time");
-let currentTime = new Date();
-dateElement.innerHTML = time(currentTime);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);

@@ -2,9 +2,9 @@ div.main {
   margin: 20px auto;
   height: 600px;
   width: 600px;
-  background-color: #f8f8f8;
+
   color: #142e5a;
-  border: #b6c8db solid;
+  border: #113e6e solid;
   padding: 20px;
   border-radius: 10px;
 }
@@ -33,6 +33,7 @@ i {
 .lol {
   border-right: #f4936d solid;
   margin: auto;
+  text-align: center;
 }
 .days {
   font-size: 25px;
@@ -53,4 +54,11 @@ span {
 .me {
   text-align: center;
   padding-top: 20px;
+}
+.day-card div {
+  color: #093f68;
+  text-align: center;
+}
+.day-card {
+  display: inline;
 }
