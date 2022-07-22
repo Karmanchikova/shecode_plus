@@ -1,8 +1,7 @@
 div.main {
   margin: 20px auto;
-  height: 600px;
+  height: 490px;
   width: 600px;
-
   color: #142e5a;
   border: #113e6e solid;
   padding: 20px;
@@ -35,11 +34,6 @@ i {
   margin: auto;
   text-align: center;
 }
-.days {
-  font-size: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
 .additional {
   font-weight: 500;
@@ -55,10 +49,21 @@ span {
   text-align: center;
   padding-top: 20px;
 }
-.day-card div {
-  color: #093f68;
+.weather-forecast {
+  margin-top: 20px;
   text-align: center;
+  color: #142e5a;
 }
-.day-card {
-  display: inline;
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
