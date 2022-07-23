@@ -81,4 +81,4 @@ celsiusClick.addEventListener("click", convertToCelsius);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-searchCity("Kyiv");
+searchCity("Kyiv,Ukraine");
