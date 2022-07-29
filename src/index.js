@@ -98,6 +98,7 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   console.log(response.data.coord);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
