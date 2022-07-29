@@ -1,3 +1,4 @@
+//Hours
 function time() {
   let now = new Date();
   let hour = document.querySelector("#time");
@@ -24,7 +25,7 @@ function formatDay(timestamp) {
 }
 formatDay();
 
-//Forecst
+//Forecast
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -37,9 +38,9 @@ function displayForecast(response) {
         forecastHTML +
         `
       <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(
-          forecastDay.dt * 1000
-        )}</div>
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.dt
+              )}</div>
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
@@ -71,7 +72,7 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
-
+//Daily weather
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -110,13 +111,13 @@ function handleSubmit(event) {
   let city = document.querySelector("#change-city").value;
   searchCity(city);
 }
-
+//F/C
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("h2");
   temperatureElement.innerHTML = `75.2 °F`;
 }
-//Bonus
+
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("h2");
