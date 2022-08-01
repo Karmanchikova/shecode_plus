@@ -48,6 +48,7 @@ span {
 .me {
   text-align: center;
   padding-top: 20px;
+  font-family: "Courier New", Courier, monospace;
 }
 .weather-forecast {
   margin-top: 20px;
